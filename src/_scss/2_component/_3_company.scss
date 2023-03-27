@@ -1,0 +1,6 @@
+.c-company__content {
+    @include tab {
+        max-width: 385px;
+        margin: 0 auto;
+    }
+}

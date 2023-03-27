@@ -1,0 +1,26 @@
+.c-moreinfo {
+    text-align: center;
+    padding: 25px 0;
+    background-color: #fff;
+    @include sp {
+        padding: 21px 0;
+
+        &.c-moreinfo--sm {
+            padding: 16px 0;
+        }
+    }
+
+    &.c-moreinfo--bg {
+        background-color: #d3d3d3;
+    }
+
+    .c-moreinfo__link {
+        color: #000;
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        @include sp {
+            font-size: 1.4rem;
+        }
+    }
+}

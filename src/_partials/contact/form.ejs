@@ -1,0 +1,100 @@
+<section class="contact__form">
+    <div class="contact__heading">
+        <div class="c-container--small">
+            <div class="c-heading">
+                <div class="c-heading__iconbox">
+                    <img class="c-heading__icon" src="./assets/img/icon-wist.svg" alt="お問い合わせフォーム">
+                </div>
+                <h2 class="c-heading__caption">お問い合わせフォーム</h2>
+            </div>
+            <p class="c-description contact__desc">
+                株式会社アイエステーへのお問い合わせ専用フォームです。弊社へのご質問・ご相談などありましたらどうぞお気軽にご連絡ください。後日メールまたはお電話にて返信いたします。</p>
+        </div>
+    </div>
+    <div class="c-container--small contact__form--container">
+        <form class="contact__formcontent" id="contact__form">
+            <div class="u-flex contact__form--row">
+                <div class="u-flex contact__form--labelbox">
+                    <p class="contact__form--require u-graybg">任意</p>
+                    <label class="contact__form--label u-textblack" for="companyName">法人名</label>
+                </div>
+                <div class="contact__form--inputbox">
+                    <input class="contact__form--input" type="text" name="company name" id="companyName"
+                        placeholder="株式会社アイエステー">
+                </div>
+            </div>
+            <div class="u-flex contact__form--row">
+                <div class="u-flex contact__form--labelbox">
+                    <p class="contact__form--require u-greenbg">必須</p>
+                    <label class="contact__form--label u-textblack" for="userName">お名前</label>
+                </div>
+                <div class="contact__form--inputbox">
+                    <input class="contact__form--input" type="text" rules="required" name="userName" id="userName"
+                        placeholder="熊本 太郎">
+                    <p class="contact__form--message"></p>
+                </div>
+            </div>
+            <div class="u-flex contact__form--row">
+                <div class="u-flex contact__form--labelbox">
+                    <p class="contact__form--require u-greenbg">必須</p>
+                    <label class="contact__form--label u-textblack" for="email">メールアドレス</label>
+                </div>
+                <div class="contact__form--inputbox">
+                    <input class="contact__form--input" type="text" rules="required|email" name="email" id="email"
+                        placeholder="example@gmail.com">
+                    <p class="contact__form--message"></p>
+                </div>
+            </div>
+            <div class="u-flex contact__form--row">
+                <div class="u-flex contact__form--labelbox">
+                    <p class="contact__form--require u-greenbg">必須</p>
+                    <label class="contact__form--label u-textblack" for="phone">電話番号</label>
+                </div>
+                <div class="contact__form--inputbox">
+                    <input class="contact__form--input" rules="required|number|max:10" type="text" name="phoneNumber" id="phone"
+                        placeholder="00-0000-0000">
+                    <p class="contact__form--message"></p>
+                </div>
+            </div>
+            <div class="u-flex contact__form--row">
+                <div class="u-flex contact__form--labelbox">
+                    <p class="contact__form--require u-graybg">任意</p>
+                    <label class="contact__form--label u-textblack" for="address">ご住所</label>
+                </div>
+                <div class="contact__form--inputbox">
+                    <div class="u-flex contact__form--address">
+                        <p>〒</p>
+                        <input class="contact__form--input contact__form--postnumb" type="text" name="address"
+                            id="address" placeholder="00-0000">
+                        <select class="contact__form--input contact__form--dropdown is-focus" name="province">
+                            <option hidden disabled selected value> --都道府県-- </option>
+                            <option value="都道府県 1"> --都道府県 1-- </option>
+                            <option value="都道府県 2"> --都道府県 2-- </option>
+                            <option value="都道府県 3"> --都道府県 3-- </option>
+                            <option value="都道府県 4"> --都道府県 4-- </option>
+                        </select>
+                    </div>
+                    <div class="u-flex contact__form--street">
+                        <input class="contact__form--input" type="text" name="build" placeholder="ビル・マンションなど">
+                        <input class="contact__form--input" type="text" name="street" placeholder="市町村区番地">
+                    </div>
+                </div>
+            </div>
+            <div class="u-flex contact__form--row">
+                <div class="u-flex contact__form--labelbox">
+                    <p class="contact__form--require u-greenbg">必須</p>
+                    <label class="contact__form--label u-textblack" for="review">お問い合わせ<br class="u-break--sm">内容</label>
+                </div>
+                <div class="contact__form--inputbox">
+                    <textarea class="contact__form--input contact__form--text" rules="required" type="text"
+                        name="review" id="review" placeholder="お問い合わせ内容をご入力ください。" rows="12"></textarea>
+                    <p class="contact__form--message"></p>
+                </div>
+            </div>
+
+            <div class="contact__form--submit">
+                <button class="contact__form--btn u-textwhite">確認する ></button>
+            </div>
+        </form>
+    </div>
+</section>

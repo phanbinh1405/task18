@@ -1,0 +1,22 @@
+.contact__hero {
+    .contact__hero--bg {
+        background: url(./assets/img/header-image.png);
+        min-height: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 70%;
+    }
+
+    .contact__pagetitle {
+        position: absolute;
+        bottom: 14%;
+        letter-spacing: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 3rem;
+        font-weight: 600;
+        @include sp {
+            font-size: 2.4rem;
+        }
+    }
+}

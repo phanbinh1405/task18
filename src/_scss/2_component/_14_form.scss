@@ -1,0 +1,161 @@
+.contact__form {
+    margin-bottom: 140px;
+
+    .contact__desc {
+        text-align: left;
+        margin-left: 12px;
+        margin-top: 14px;
+        margin-right: 16px;
+        @include sp {
+            margin-left: 16px;
+        }
+    }
+
+    .contact__form--container {
+        width: 600px;
+        margin-top: 68px;
+        @include sp {
+            margin-top: 48px;
+        }
+    }
+
+    .contact__form--row {
+        min-height: 35px;
+        margin-bottom: 25px;
+        align-items: flex-start;
+        @include sp {
+            flex-direction: column;
+        }
+    }
+
+    .contact__form--labelbox {
+        width: 150px;
+        align-items: flex-start;
+        margin-top: 7px;
+        @include sp {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+    }
+
+    .contact__form--require {
+        font-size: 1.2rem;
+        color: #fff;
+        width: 42px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 8px;
+        padding: 2px 0;
+    }
+
+    .contact__form--label {
+        font-size: 1.4rem;
+        font-weight: 300;
+        line-height: 1.8;
+        letter-spacing: 1.2px;
+        font-feature-settings: "palt";
+    }
+
+    .contact__form--inputbox {
+        flex: 1;
+        margin-left: 14px;
+        margin-right: 6px;
+        position: relative;
+        @include sp {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+
+    .contact__form--input {
+        width: 100%;
+        display: block;
+        border: 1px solid rgb(204, 204, 204);
+        box-sizing: border-box;
+        padding: 9px 10px;
+        border-radius: 0;
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 10px;
+
+        &::placeholder {
+            font-size: 1.2rem;
+            font-weight: 300;
+            color: #ccc;
+            letter-spacing: 1.1px;
+            font-feature-settings: "palt";
+            font-family: $main-fonts;
+        }
+
+        &:focus {
+            border-color: rgb(166, 138, 42);
+        }
+    }
+
+    .contact__form--address {
+        align-items: center;
+    }
+
+    .contact__form--postnumb {
+        width: 25%;
+        margin-right: 19px;
+        margin-left: 10px;
+        margin-bottom: 0;
+    }
+
+    .contact__form--dropdown {
+        width: 32.4%;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+        font-feature-settings: "palt";
+        font-family: $main-fonts;
+        font-size: 1.2rem;
+        padding: 9px 5px;
+        appearance: none;
+        background: url("./assets/img/dropdown.png");
+        background-repeat: no-repeat;
+        background-position: 92%;
+
+        &.is-focus {
+            color: #ccc;
+        }
+    }
+
+    .contact__form--street {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .contact__form--text {
+        padding-top: 12px;
+        padding-bottom: 0;
+        resize: none;
+    }
+
+    .contact__form--message {
+        margin-top: -7px;
+        color: #f00;
+        font-size: 1.2rem;
+        position: absolute;
+        left: 0;
+        bottom: -13px;
+    }
+
+    .contact__form--submit {
+        text-align: center;
+        padding-top: 27px;
+    }
+
+    .contact__form--btn {
+        background-color: #48b7d0;
+        border: none;
+        outline: none;
+        padding: 8px;
+        width: 270px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}

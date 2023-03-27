@@ -1,0 +1,138 @@
+.c-gnavsp {
+    position: fixed;
+    top: 45px;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: #fff;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+
+    &.open {
+        height: calc(100% - 45px);
+        overflow-y: auto;
+
+        @for $i from 1 through 9 {
+            .c-menusp__item:nth-child(#{$i}) {
+                animation: slideIn 0.5s  0.2s * ($i - 1) ease-in-out forwards;
+            }
+        }
+    }
+
+    .c-gnavsp__info {
+        font-feature-settings: "palt";
+        padding: 0 20px;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: #333;
+        margin-top: 22px;
+        margin-left: 2px;
+        letter-spacing: 0.1em;
+    }
+
+    .c-gnavsp__tel {
+        margin-top: 9px;
+        letter-spacing: 0.1em;
+        font-family: "Lora", serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #333;
+        letter-spacing: 1px;
+        transform: translateX(-2px);
+
+        .c-gnavsp__telsm {
+            letter-spacing: 1.5px;
+            font-feature-settings: "palt";
+        }
+    }
+
+    .c-gnavsp__fax {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #333;
+        margin-top: 6px;
+        letter-spacing: 0.5px;
+    }
+
+    .c-header__menusp {
+        display: flex;
+        flex-direction: column;
+        margin-top: 13px;
+    }
+
+    .c-menusp__item {
+        border-top: 1px dotted #ccc;
+        padding: 3.65% 20px;
+        letter-spacing: 0.1em;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #000;
+        line-height: 1.4;
+        font-feature-settings: "palt";
+        opacity: 0;
+
+        &.c-menusp__item--bggreen {
+            background-color: #40a62a;
+        }
+
+        &.c-menusp__item--bgblue {
+            background-color: #48b7d0;
+        }
+    }
+
+
+
+    .c-menusp__icon {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #44b8d1;
+        line-height: 1.4;
+    }
+
+    .c-menusp__subnav {
+        display: none;
+        position: absolute;
+        top: 116px;
+        left: 0;
+        height: calc(100% - 116px);
+        width: 100%;
+        background: #fff;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .c-menusp__back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #fff;
+        background-color: #333;
+        margin-top: 23px;
+        padding: 2.2% 0;
+        max-height: 44px;
+    }
+
+    .c-menusp__backicon {
+        font-weight: 600;
+        font-size: 1.8rem;
+        padding-right: 9px;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

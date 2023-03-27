@@ -1,0 +1,60 @@
+.u-textcenter {
+    text-align: center !important;
+}
+
+.u-textblack { 
+    color: #333 !important;
+}
+
+.u-textwhite { 
+    color: #fff !important;
+}
+
+.u-textblue {
+    color: #48b7d0;
+}
+
+.u-greenbg {
+    background-color: #40a62a;
+}
+
+.u-graybg {
+    background-color: rgb(161, 161, 161);
+}
+
+.u-relative {
+    position: relative;
+}
+
+.u-widthfull {
+    width: 100%;
+}
+
+.u-flex {
+    display: flex;
+}
+
+.u-fontw300 {
+    font-weight: 300;
+}
+
+.u-fontw600 {
+    font-weight: 600;
+}
+
+.u-accent {
+    color: #f90;
+}
+
+// Break 
+.u-break--sm {
+    @include sp {
+        display: none !important;
+    }
+}
+
+.u-break--lg {
+    @include tab {
+        display: none;
+    }
+}

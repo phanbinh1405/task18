@@ -1,0 +1,7 @@
+
+.contact {
+    margin-top: 80px;
+    @include tab {
+        margin-top: 45px;
+    }
+}

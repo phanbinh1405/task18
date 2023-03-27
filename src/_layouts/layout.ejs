@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      <%= (typeof title != "undefined" ? title : "Wist home page") %>
+    </title>
+    {{ meta }}
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="module" src="./_scss/style.js"></script>
+    {{ head }}
+  </head>
+  <body>
+
+    <%- include('_partials/header'); -%>
+
+    {{ content }}
+
+    <%- include('_partials/footer'); -%>
+    <%- include('_partials/backtotop'); -%>
+
+    {{ script }}
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

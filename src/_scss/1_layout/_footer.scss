@@ -1,0 +1,245 @@
+/*------------------------------------------------------------
+footer
+------------------------------------------------------------*/
+.c-footer {
+    padding: 20px;
+    min-height: 349px;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    margin-top: 40px;
+    @include tab {
+        padding: 0;
+        margin-top: 37px;
+        min-height: 358px;
+    }
+
+    .c-footer__bg {
+        position: absolute;
+        background: transparent;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 526px;
+        overflow: hidden;
+        pointer-events: none;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            width: 34.9%;
+            left: 0;
+            background: linear-gradient(to bottom left, rgba(64, 166, 42, 0) 50%, #40a62a 50%) top left/100% 100% no-repeat;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            width: 34.9%;
+            right: 0;
+            background: linear-gradient(to bottom right, rgba(64, 166, 42, 0) 50%, #48b7d0 50%) top left/100% 100% no-repeat;
+        }
+        @include tab {
+            height: 395px;
+
+            &::after,
+            &::before {
+                width: 29.9%;
+            }
+        }
+    }
+
+    .c-footer__img {
+        margin-bottom: 11px;
+        @include tab {
+            width: 92px;
+            margin: 20px auto 0;
+        }
+    }
+
+    .c-footer__info {
+        @include tab {
+            margin-top: 12px;
+        }
+    }
+      
+
+    .c-footer__name {
+        font-size: 1.3rem;
+        font-weight: 300;
+        letter-spacing: 1.4px;
+        font-feature-settings: "palt" 1;
+
+        .c-footer__name--strong {
+            font-size: 1.6rem;
+            font-weight: 600;
+            position: relative;
+            @include tab {
+                font-size: 1.2rem;
+
+                &::before {
+                    content: "";
+                    display: block;
+                }
+            }
+        }
+
+        @include tab {
+            font-size: 1.2rem;
+        }
+    }
+
+    .c-footer__company {
+        margin-bottom: 15px;
+        @include tab {
+            margin-bottom: 7px;
+        }
+    }
+
+    .c-footer__address {
+        @extend .c-footer__name;
+        margin-top: 5px;
+        letter-spacing: 1.3px;
+        @include tab {
+            text-shadow: 1px 1px 0.5px #fff, 1px -1px 0.5px #fff, -1px 1px 0.5px #fff, -1px -1px 0.5px #fff, 1px 0 0.5px #fff, 0 1px 0.5px #fff, 1px 0 0.5px #fff, 0 -1px 0.5px #fff;
+        }
+    }
+
+    .c-footer__tel {
+        font-size: 2.6rem;
+        font-weight: 400;
+        font-family: YuMincho;
+
+        .c-footer__tel--big {
+            font-size: 3.2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        @include tab {
+            font-size: 1.6rem;
+
+            .c-footer__tel--big {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .c-footer__fax {
+        font-size: 1.6rem;
+        font-family: YuMincho;
+        letter-spacing: 0.1em;
+        line-height: 1.7;
+        @include tab {
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+    }
+
+    .c-footer__links {
+        width: 370px;
+        margin: 14px auto 0;
+        display: flex;
+        justify-content: space-between;
+        @include tab {
+            width: 237px;
+            margin: 10px auto 0;
+        }
+    }
+
+    .c-footer__linkitem {
+        font-size: 1.4rem;
+        letter-spacing: 0.05em;
+        @include tab {
+            text-shadow: 1px 1px 0.5px #fff, 1px -1px 0.5px #fff, -1px 1px 0.5px #fff, -1px -1px 0.5px #fff, 1px 0 0.5px #fff, 0 1px 0.5px #fff, 1px 0 0.5px #fff, 0 -1px 0.5px #fff;
+        }
+        @include tab {
+            font-size: 1.1rem;
+
+            .c-footer__linkitemicon {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    .c-footer__copyright {
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-top: 34px;
+        letter-spacing: 0.1em;
+        @include tab {
+            text-shadow: 1px 1px 0.5px #fff, 1px -1px 0.5px #fff, -1px 1px 0.5px #fff, -1px -1px 0.5px #fff, 1px 0 0.5px #fff, 0 1px 0.5px #fff, 1px 0 0.5px #fff, 0 -1px 0.5px #fff;
+        }
+        @include tab {
+            font-size: 1rem;
+            margin-top: 18px;
+        }
+    }
+
+    .c-footer__future {
+        position: absolute;
+        width: 311px;
+        font-family: "Lora", sans-serif;
+        bottom: 47px;
+        left: 3.8%;
+        color: #fff;
+        @include tab {
+            position: relative;
+            color: #40a62a;
+            left: 0;
+            bottom: 0;
+            margin: 0 auto;
+        }
+    }
+
+    .c-future__title {
+        font-size: 5rem;
+        font-weight: 400;
+        line-height: 1;
+        text-align: center;
+        transform: translateX(-5px);
+        text-shadow: 1px 1px 0 #40a62a, 1px -1px 0 #40a62a, -1px 1px 0 #40a62a, -1px -1px 0 #40a62a, 1px 0 0 #40a62a, 0 1px 0 #40a62a, -1px 0 0 #40a62a, 0 -1px 0 #40a62a;
+
+        .c-future__title--small {
+            font-size: 2rem;
+        }
+
+        .c-future__title--bot {
+            display: inline-block;
+            transform: translateY(-5px);
+
+        }
+        @include tab {
+            text-shadow: none;
+            font-size: 3rem;
+            max-width: 97px;
+            margin: 0 auto;
+
+            .c-future__title--small {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .c-future__subtitle {
+        letter-spacing: 0.17em;
+        text-shadow: 1px 1px 0 #40a62a, 1px -1px 0 #40a62a, -1px 1px 0 #40a62a, -1px -1px 0 #40a62a, 1px 0 0 #40a62a, 0 1px 0 #40a62a, -1px 0 0 #40a62a, 0 -1px 0 #40a62a;
+        @include tab {
+            letter-spacing: 0.2em;
+            font-feature-settings: "palt";
+            text-shadow: none;
+            font-size: 1.2rem;
+            margin-top: -2px;
+        }
+    }
+}
+
+@font-face {
+    font-family: YuMincho;
+    src: url(./assets/font/yumincho.ttf);
+}

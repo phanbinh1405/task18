@@ -1,0 +1,75 @@
+.c-product {
+    background-color: #f5f5f5;
+    padding-bottom: 3.6em;
+    @include sp {
+        padding-bottom: 1.45em;
+    }
+
+    .c-product__bg {
+        background: url(./assets/img/wist-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        min-height: 533px;
+        padding-bottom: 30px;
+        @include tab {
+            background: url(./assets/img/wist-bg-sp.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            min-height: 476px;
+        }
+    }
+
+    .c-product__slide {
+        .slick-track {
+            display: flex;
+        }
+        @include tab {
+            max-width: 767px;
+            margin: 19px auto 0;
+        }
+    }
+
+    .c-product__next,
+    .c-product__prev {
+        position: absolute;
+        width: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        outline: none;
+        background: transparent;
+        z-index: 9999;
+    }
+
+    @include tab {
+        .c-product__next {
+            right: -10px;
+        }
+
+        .c-product__prev {
+            left: -10px;
+        }
+    }
+
+    
+    @include sp {
+        .c-product__next {
+            right: -6px;
+        }
+    
+        .c-product__prev {
+            left: -6px;
+        }
+
+        .slick-list {
+            margin: 0 20px;
+        }
+
+        .slick-initialized .slick-slide {
+            margin: 0 -20px;
+            height: inherit;
+        }
+    }
+}

@@ -1,0 +1,148 @@
+.c-drone {
+    margin-top: 6.1em;
+    @include sp {
+        margin-top: 2.9em;
+    }
+
+    .c-drone__bg {
+        background: url("./assets/img/bg-forest.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    .c-drone__inner {
+        max-width: 1240px;
+        padding: 20px;
+        min-height: 461px;
+        margin: 0 auto;
+        position: relative;
+        align-items: center;
+        z-index: 0;
+        @include sp {
+            flex-direction: column;
+            padding: 20px 20px 39px;
+        }
+    }
+
+    .c-drone__content {
+        max-width: 45.83333333333333%;
+        margin-left: auto;
+        @include sp {
+            max-width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    .c-drone__heading {
+        font-size: 2.4rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        @include sp {
+            font-size: 1.6rem;
+        }
+    }
+
+    .c-drone__heading--top {
+        letter-spacing: 0.05em;
+    }
+
+    .c-drone__text {
+        font-size: 1.4rem;
+        margin-top: 20px;
+        letter-spacing: 0.09em;
+        font-feature-settings: "palt";
+        line-height: 2;
+        @include sp {
+            font-size: 1.2rem;
+            margin-top: 20px;
+            line-height: 1.7;
+        }
+    }
+
+    .c-drone__notice {
+        margin-top: 20px;
+        font-size: 1.2rem;
+        line-height: 2.1;
+        font-feature-settings: "palt";
+        letter-spacing: 1.2px;
+
+        @include sp {
+            margin-top: 12px;
+            line-height: 1.7;
+        }
+    }
+
+    .c-drone__lazer {
+        position: absolute;
+        top: 0;
+        width: 1px;
+        left: 49.999%;
+        transform: translateX(-50%);
+        height: 100%;
+        z-index: -9999;
+
+        &::before {
+            width: 1px;
+            height: 91%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgb(255, 0, 0);
+            z-index: 0;
+        }
+
+        &::after {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            content: "";
+            position: absolute;
+            top: 89.9%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgb(255, 0, 0);
+            z-index: 0;
+            
+        }
+    }
+
+    .c-drone__prodimg {
+        position: absolute;
+        z-index: -1;
+        animation: float 4s ease-in-out infinite;
+        left: 0;
+        width: 86.5%;
+        max-width: 1065px;
+        @include sp {
+            position: relative;
+            animation: unset;
+            left: -2.6%;
+            top: 4px;
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translate(-24%, 0);
+    }
+
+    25% {
+        transform: translate(-27%, -10px);
+    }
+
+    50% {
+        transform: translate(-24%, 0);
+    }
+
+    75% {
+        transform: translate(-27%, -10px);
+    }
+
+    100% {
+        transform: translate(-24%, 0);
+    }
+}

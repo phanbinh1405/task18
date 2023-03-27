@@ -1,0 +1,301 @@
+.c-cardslist {
+    margin: 0 -15px;
+    @include tab {
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    .c-card {
+        position: relative;
+        width: 25%;
+        padding: 15px;
+        flex: 0 1 auto;
+        overflow: hidden;
+        display: block;
+        cursor: pointer;
+        @include tab {
+            width: 50%;
+            padding: 10px;
+        }
+    }
+
+    .c-card__content {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+        min-height: 120px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        z-index: 10;
+
+
+        &.c-card__content--red {
+            background-color: rgb(208, 94, 72);
+        }
+
+        &.c-card__content--blue {
+            background-color: rgb(72, 183, 208);
+            @include sp {
+                .c-card__icon {
+                    width: 70px;
+                }
+            }
+        }
+
+        &.c-card__content--yellow {
+            background-color: rgb(166, 138, 42);
+            @include sp {
+                .c-card__icon {
+                    width: 20px;
+                }
+            }
+        }
+
+        &.c-card__content--green {
+            background-color: rgb(64, 166, 42);
+        }
+
+        @include sp {
+            bottom: 10%;
+            left: 0;
+            right: 0;
+            font-feature-settings: "palt";
+            min-height: 86px;
+            padding: 0;
+            width: 127.5px;
+            max-width: 78%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    .c-card__icon {
+        margin-bottom: 8px;
+        height: 43px;
+        flex: 0 1 auto;
+        @include sp {
+            margin-bottom: 0;
+            height: 32px;
+            width: 28px;
+        }
+    }
+
+    .c-card__title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        flex: 0 1 auto;
+        letter-spacing: 2.7px;
+        transform: translateY(7px);
+        @include sp {
+            font-size: 1.4rem;
+            transform: translate(1px, 5px);
+        }
+    }
+
+    .c-card--small {
+        @extend .c-card;
+
+        &:nth-child(even) {
+            transform: translateY(15px);
+        }
+
+        @include tab {
+            &:nth-child(even) {
+                transform: translateY(0);
+            }
+        }
+
+        .c-card__content {
+            position: relative;
+            top: 0;
+            left: 0;
+            min-height: unset;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.3);
+            padding: 0;
+            height: 100%;
+
+            .c-card__titleicon {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #333;
+                margin-top: auto;
+                text-align: right;
+            }
+            @include tab {
+                width: 225px;
+
+                &::before {
+                    right: 16px;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .c-card__thumb {
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .c-card__label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 1.2rem;
+            font-weight: 300;
+            padding: 7px 4px;
+            line-height: 1;
+            letter-spacing: 1.3px;
+            font-feature-settings: "palt";
+
+            &.c-card__label--blue {
+                background: #48b7d0;
+            }
+
+            &.c-card__label--red {
+                background: #d05e48;
+                padding: 8px 6px 6px 8px;
+                letter-spacing: 1.2px;
+            }
+            @include sp {
+                bottom: 1px;
+                padding: 7px 10px 2px;
+            }
+        }
+
+        .c-card__title {
+            min-height: 95px;
+            font-size: 1.5rem;
+            padding: 9px 9px 10px 13px;
+            letter-spacing: 1.2px;
+            line-height: 1.6;
+            transform: translateY(0);
+            width: 100%;
+            flex-direction: column;
+            flex-grow: 1;
+
+            &.c-card__title--fixspacing {
+                letter-spacing: 2px;
+            }
+            @include sp {
+                min-height: 78px;
+                font-size: 1.3rem;
+                text-align: left;
+                padding: 7px 14px 6px;
+
+                &.c-card__title--fixspacing {
+                    letter-spacing: 1.4px;
+                }
+            }
+        }
+    }
+}
+
+.c-cardoverlay {
+    &::before {
+        position: absolute;
+        content: "";
+        top: 15px;
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        background: linear-gradient(to right top,
+        rgba(255, 255, 255, 0.7) 50%,
+        transparent 50%);
+        transition: all 0.3s ease;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 15px;
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        background: linear-gradient(to left bottom,
+        rgba(255, 255, 255, 0.7) 23.7%,
+        transparent 23%);
+        transition: all 0.3s ease;
+    }
+    @include tab {
+        &::before,
+        &::after {
+            top: 10px;
+            left: 10px;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        &::after {
+            background: linear-gradient(to left bottom,
+            rgba(255, 255, 255, 0.7) 24.9%,
+            transparent 23%);
+        }
+    }
+
+    &:hover {
+        &::before {
+            transform: translateX(-100%);
+        }
+
+        &::after {
+            transform: translateX(100%);
+        }
+    }
+}
+
+.c-cardoverlay--reverse {
+    &::before {
+        position: absolute;
+        content: "";
+        top: 15px;
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        background: linear-gradient(to left top,
+        rgba(255, 255, 255, 0.7) 50%,
+        transparent 50%);
+        transition: all 0.3s ease;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 15px;
+        left: 15px;
+        bottom: 15px;
+        right: 15px;
+        background: linear-gradient(to right bottom,
+        rgba(255, 255, 255, 0.7) 23.7%,
+        transparent 23%);
+        transition: all 0.3s ease;
+    }
+    @include tab {
+        &::before,
+        &::after {
+            top: 10px;
+            left: 10px;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        &::after {
+            background: linear-gradient(to right bottom,
+            rgba(255, 255, 255, 0.7) 24.9%,
+            transparent 23%);
+        }
+    }
+
+    &:hover {
+        &::before {
+            transform: translateX(100%);
+        }
+
+        &::after {
+            transform: translateX(-100%);
+        }
+    }
+}

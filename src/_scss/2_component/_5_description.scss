@@ -1,0 +1,15 @@
+.c-description {
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 23px;
+    line-height: 1.9;
+    letter-spacing: 1.4px;
+    font-feature-settings: "palt";
+    color: #333;
+    @include sp {
+        margin-top: 13px;
+        margin-bottom: 7px;
+        line-height: 1.75;
+        letter-spacing: 1.2px;
+    }
+}

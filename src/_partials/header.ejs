@@ -1,0 +1,202 @@
+<header class="c-header u-flex">
+  <div class="u-flex c-header__inner">
+    <a class="c-header__logolink" href="<%= BASE_URL %>index.html">
+      <div class="c-header__logo">
+        <picture>
+          <source media="(max-width: 1024px)" srcset="./assets/img/logosp.png">
+          <img class="c-header__logoimg" src="./assets/img/logo.png" alt="wist logo">
+        </picture>
+      </div>
+    </a>
+    <nav class="c-gnav u-flex">
+      <ul class="c-header__menulist u-flex">
+        <% if (typeof linklists !='undefined' ) { %>
+          <% linklists.main && linklists.main.forEach(link=> { %>
+            <li class="c-header__menuitem u-flex">
+              <a class="c-header__link u-fontw300" href="<%= link.url %>">
+                <%= link.title %>
+              </a>
+              <% if (link.links) { %>
+                <ul class="c-header__submenu">
+                  <% link.links.forEach(child_link=> { %>
+                    <li class="c-header__submenuitem">
+                      <a class="c-header__submenulink u-fontw300 u-textwhite u-flex" href="<%= child_link.url %>">
+                        <%= child_link.title %>
+                          <i class="fas fa-angle-right c-header__arrowicon"></i>
+                      </a>
+                    </li>
+                    <% }) %>
+                </ul>
+                <% } %>
+            </li>
+            <% }) %>
+              <% } %>
+      </ul>
+      <div class="c-header__buttongroup u-flex">
+        <div class="c-header__menubutton c-header__menubutton--green u-flex">
+          <a class="c-header__link u-fontw300 u-textwhite" href="#">採用情報</a>
+          <ul class="c-header__submenu">
+            <li class="c-header__submenuitem">
+              <a class="c-header__submenulink u-fontw300 u-textwhite u-flex" href="#">
+                私たちの仕事
+                <i class="fas fa-angle-right c-header__arrowicon"></i>
+              </a>
+            </li>
+            <li class="c-header__submenuitem">
+              <a class="c-header__submenulink u-fontw300 u-textwhite u-flex" href="#">
+                先輩社員の声
+                <i class="fas fa-angle-right c-header__arrowicon"></i>
+              </a>
+            </li>
+            <li class="c-header__submenuitem">
+              <a class="c-header__submenulink u-fontw300 u-textwhite u-flex" href="#">
+                募集要項
+                <i class="fas fa-angle-right c-header__arrowicon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="c-header__menubutton c-header__menubutton--blue u-flex">
+          <a class="c-header__link u-fontw300 u-textwhite" href="./contact.html">お問い合わせ</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="c-header__toggle">
+      <img class="c-header__toggle--open" src="./assets/img/toggle-sp.png" alt="Menu toggle">
+      <img class="c-header__toggle--close" src="./assets/img/toggle-close-sp.png" alt="Menu toggle close">
+    </div>
+
+    <nav class="c-gnavsp">
+      <div class="c-gnavsp__info">
+        <p class="c-gnavsp__address">
+          〒860-0833　熊本市中央区平成3丁目16番13号
+        </p>
+        <p class="c-gnavsp__tel">
+          tel.<span class="c-gnavsp__telsm">096-285-5177</span>
+        </p>
+        <p class="c-gnavsp__fax">fax.096-285-5188</p>
+      </div>
+
+      <ul class="c-header__menusp">
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            お知らせ
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            会社案内
+          </a>
+        </li>
+        <li class="c-menusp__item c-menusp__sbnav" data-subnav="1">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">+</span>
+            事業紹介
+          </a>
+
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            事業紹介
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            技術資料
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            交通アクセス
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            プライバシーポリシー
+          </a>
+        </li>
+        <li class="c-menusp__item c-menusp__item--bggreen c-menusp__sbnav" data-subnav="2">
+          <a href="#" class="c-menusp__link u-textwhite">
+            <span class="c-menusp__icon u-textwhite">+</span>
+            採用情報
+          </a>
+        </li>
+        <li class="c-menusp__item c-menusp__item--bgblue">
+          <a href="./contact.html" class="c-menusp__link u-textwhite">
+            <span class="c-menusp__icon u-textwhite">></span>
+            お問い合わせ
+          </a>
+        </li>
+      </ul>
+      <ul class="c-menusp__subnav" id="subnav1">
+        <li class="c-menusp__back">
+          <span class="c-menusp__backicon">&lt;</span>
+          戻る
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            私たちの仕事
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            先輩社員の声
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            募集要項
+          </a>
+        </li>
+      </ul>
+
+      <ul class="c-menusp__subnav" id="subnav2">
+        <li class="c-menusp__back">
+          <span class="c-menusp__backicon">&lt;</span>
+          戻る
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            事業紹介（インデックス）
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            防災・減災業務
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            ICT・BIM/CIM
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            測量・設計業務
+          </a>
+        </li>
+        <li class="c-menusp__item">
+          <a href="#" class="c-menusp__link">
+            <span class="c-menusp__icon">></span>
+            調査業務
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</header>
